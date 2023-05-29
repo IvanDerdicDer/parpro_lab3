@@ -45,16 +45,15 @@ def jacobi_step(
         n: int,
         queue: cl.CommandQueue
 ) -> None:
-    for i in np.arange(1, m + 1, 1):
-        jacobi_inner(
-            queue,
-            (m, ),
-            None,
-            psi_temp,
-            psi,
-            np.int32(m),
-            np.int32(n)
-        )
+    jacobi_inner(
+        queue,
+        (m, ),
+        None,
+        psi_temp,
+        psi,
+        np.int32(m),
+        np.int32(n)
+    )
 
 
 tolerance = 0
@@ -166,14 +165,14 @@ print(f"{execution_time = }\n{error = }\n{iter_time = }")
 
 """
 Paralelno
-execution_time = 21.695043325424194
+execution_time = 0.07820248603820801
 error = 0.007035327570426907
-iter_time = 0.21695043325424193
+iter_time = 0.0007820248603820801
 
 Slijedno
 execution_time = 53.69549036026001
 error = 0.007045131051774809
 iter_time = 0.5369549036026001
 
-ubrzanje cca 3x
+ubrzanje cca 687x
 """
