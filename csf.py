@@ -67,8 +67,8 @@ n_base = 32
 irrotational = 1
 check_err = 0
 
-scale_factor = 16
-num_iter = 100
+scale_factor = 64
+num_iter = 1000
 
 if tolerance:
     check_err = 1
@@ -164,6 +164,9 @@ iter_time = execution_time / num_iter
 print(f"{execution_time = }\n{error = }\n{iter_time = }")
 
 """
+scale_factor = 16
+num_iter = 100
+
 Paralelno
 execution_time = 0.07820248603820801
 error = 0.007035327570426907
@@ -175,4 +178,13 @@ error = 0.007045131051774809
 iter_time = 0.5369549036026001
 
 ubrzanje cca 687x
+
+----------------------------
+
+scale_factor = 64
+num_iter = 1000
+
+execution_time = 2.8013358116149902
+error = 0.0012520141795221609
+iter_time = 0.0028013358116149903
 """
